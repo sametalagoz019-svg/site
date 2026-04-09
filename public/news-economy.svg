@@ -1,0 +1,13 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#F1E8DA"/>
+  <rect x="76" y="86" width="1048" height="548" rx="32" fill="#FFF9EF"/>
+  <rect x="128" y="154" width="146" height="378" rx="18" fill="#C56A36"/>
+  <rect x="312" y="246" width="146" height="286" rx="18" fill="#D78A48"/>
+  <rect x="496" y="206" width="146" height="326" rx="18" fill="#E1A75B"/>
+  <rect x="680" y="286" width="146" height="246" rx="18" fill="#B7463A"/>
+  <rect x="864" y="176" width="146" height="356" rx="18" fill="#7E1B23"/>
+  <path d="M154 410C276 316 391 281 534 283C655 285 739 331 858 312C934 299 979 257 1049 191" stroke="#8F1720" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="1049" cy="191" r="22" fill="#F1C24B"/>
+  <text x="118" y="144" fill="#8F1720" font-family="Trebuchet MS, Arial, sans-serif" font-size="60" font-weight="700">Ekonomi Dosyası</text>
+  <text x="118" y="196" fill="#8A5E36" font-family="Arial, sans-serif" font-size="28">Esnaf, yatırım ve şehir ticareti</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#132A1E"/>
+  <rect x="74" y="68" width="1052" height="584" rx="36" fill="#1F5D3B"/>
+  <rect x="114" y="108" width="972" height="504" rx="24" stroke="#E9F8E7" stroke-width="6"/>
+  <line x1="600" y1="108" x2="600" y2="612" stroke="#E9F8E7" stroke-width="6"/>
+  <circle cx="600" cy="360" r="78" stroke="#E9F8E7" stroke-width="6"/>
+  <circle cx="600" cy="360" r="16" fill="#E9F8E7"/>
+  <circle cx="985" cy="176" r="54" fill="#F1C24B"/>
+  <path d="M184 532L387 348L574 420L785 252L1010 330" stroke="#F1C24B" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="104" y="170" fill="#E9F8E7" font-family="Trebuchet MS, Arial, sans-serif" font-size="60" font-weight="700">Spor Servisi</text>
+  <text x="104" y="220" fill="#C5E8D0" font-family="Arial, sans-serif" font-size="28">Kulüpler, altyapı ve maç takibi</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#F3ECE0"/>
+  <rect x="90" y="88" width="1020" height="544" rx="32" fill="#FFFDF8"/>
+  <rect x="146" y="146" width="430" height="308" rx="24" fill="#8F1720"/>
+  <rect x="626" y="162" width="428" height="26" rx="13" fill="#C9A268"/>
+  <rect x="626" y="220" width="384" height="20" rx="10" fill="#D9C7A9"/>
+  <rect x="626" y="272" width="350" height="20" rx="10" fill="#D9C7A9"/>
+  <rect x="626" y="324" width="400" height="20" rx="10" fill="#D9C7A9"/>
+  <rect x="146" y="490" width="908" height="20" rx="10" fill="#E3D5C1"/>
+  <rect x="146" y="534" width="760" height="20" rx="10" fill="#E3D5C1"/>
+  <text x="626" y="136" fill="#8F1720" font-family="Trebuchet MS, Arial, sans-serif" font-size="56" font-weight="700">Sivas Gündem</text>
+</svg>
