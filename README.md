@@ -1,91 +1,84 @@
-# Sivas Gündem 58
+# Sivas Gundem 58
 
-Next.js tabanlı yerel haber sitesi. Proje hem yerel JSON veri kaynağıyla hem de MongoDB ile çalışabilir.
+Next.js tabanli yerel haber sitesi. Proje hem `data/localdb.json` uzerinden hem de MongoDB ile calisabilir.
 
-## Çalışma Modları
+## Ozellikler
 
-- `LOCAL_DB=1`: MongoDB olmadan, `data/localdb.json` üzerinden çalışır.
-- `LOCAL_DB=0`: MongoDB bağlantısı ile çalışır.
+- Mobil uyumlu haber arayuzu
+- Admin giris ve haber yonetimi
+- Manset, surmanset ve vitrin alani yonetimi
+- Gorsel yukleme
+- Ziyaret ve makale goruntuleme analitigi
+- Dis kaynaktan haber cekme ve editoryal onay akisi
+- Dua vakti bandi ve temel SEO ciktilari
 
-## Özellikler
+## Calisma Modlari
 
-- Mobil uyumlu haber arayüzü
-- Admin giriş sistemi
-- Haber oluşturma, düzenleme ve silme
-- Taslak, onay bekleyen ve yayınlanan haber akışı
-- Görsel yükleme
-- Ziyaretçi ve makale görüntüleme istatistikleri
-- İnternetten haber çekme ve editoryal onaya alma
-- Ana sayfa manşet, sürmanşet ve vitrin yönetimi
-- Dua vakti bandı ve temel SEO uçları
+- `LOCAL_DB=1`: MongoDB olmadan, `data/localdb.json` ile calisir.
+- `LOCAL_DB=0`: MongoDB baglantisi ile calisir.
 
 ## Kurulum
 
-1. `.env.example` dosyasını `.env.local` olarak kopyalayın.
-2. Yerel kullanım için `.env.local` içinde `LOCAL_DB=1` bırakın.
-3. Bağımlılıkları kurun:
+1. `.env.example` dosyasini `.env.local` olarak kopyalayin.
+2. Yerel kullanim icin `.env.local` icinde `LOCAL_DB=1` birakin.
+3. Bagimliliklari kurun.
 
 ```bash
 npm install
 ```
 
-4. Geliştirme ortamını başlatın:
+4. Gelistirme ortamini baslatin.
 
 ```bash
 npm run dev
 ```
 
-Bu ortamda `next dev` bazı izin kısıtları yüzünden açılamazsa şu akışı kullanın:
+Bu ortamda `next dev` izin veya port kaynakli sorun cikarirsa su akisi kullanilabilir:
 
 ```bash
 npm run build
 npm run start
 ```
 
-## Varsayılan Admin Hesabı
+## Varsayilan Admin Hesabi
 
-İlk girişte `.env.local` içindeki şu alanlar kullanılır:
+Ilk giriste `.env.local` icindeki su alanlar kullanilir:
 
 - `ADMIN_EMAIL`
 - `ADMIN_PASSWORD`
 
-Kullanıcı yoksa sistem ilk oturumda bu hesabı oluşturur.
+Kullanici yoksa sistem ilk oturumda bu hesabi olusturur.
 
-## Yerel Veri Modu
+## Onemli Ortam Degiskenleri
 
-- Veriler `data/localdb.json` içinde tutulur.
-- Admin girişi, haber yönetimi ve temel içerik akışı bu modda çalışır.
-- Demo, içerik hazırlığı ve arayüz geliştirme için yeterlidir.
-
-## MongoDB Modu
-
-1. Makinede MongoDB kurun.
-2. `.env.local` içindeki `MONGODB_URI` değerini gerçek bağlantı adresiyle değiştirin.
-3. `LOCAL_DB=0` yapın.
-4. Uygulamayı yeniden başlatın.
-
-## Önemli Ortam Değişkenleri
-
+- `LOCAL_DB`
 - `MONGODB_URI`
 - `JWT_SECRET`
 - `ADMIN_EMAIL`
 - `ADMIN_PASSWORD`
 - `NEXT_PUBLIC_SITE_URL`
 - `CRON_SECRET`
-- `LOCAL_DB`
 
-## Haber Çekme
+## Haber Cekme
 
-- Yönetim panelindeki haber çekme akışı ile
-- veya `POST /api/admin/cron-fetch`
-
-Header:
+Haber cekme islemi yonetim panelinden ya da `POST /api/admin/cron-fetch` uzerinden tetiklenebilir.
 
 ```text
 Authorization: Bearer <CRON_SECRET>
 ```
 
-## Repo Notları
+## Klasor Yapisi
 
-- `node_modules`, `.next`, `.run` ve `.env.local` repoya dahil edilmez.
-- Yüklenen medya dosyaları `public/uploads/` altında tutulur.
+- `components/`: arayuz bilesenleri ve admin formlari
+- `data/`: yerel JSON veri kaynagi
+- `lib/`: yardimci fonksiyonlar, veri katmani ve sabitler
+- `models/`: MongoDB modelleri
+- `pages/`: sayfalar ve API route'lari
+- `public/`: statik dosyalar ve yuklenen medya
+- `styles/`: genel stiller
+
+## Repo Notlari
+
+- `node_modules`, `.next`, `.run`, `.vercel` ve lokal ortam dosyalari repoya dahil edilmez.
+- Yuklenen medya dosyalari `public/uploads/` altinda tutulur.
+- MongoDB kurulum artifaktlari ve log dosyalari repoda takip edilmez.
