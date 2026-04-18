@@ -3,10 +3,10 @@ import { useRouter } from "next/router";
 import { SITE_NAME } from "../lib/constants";
 
 const NAV_ITEMS = [
-  { href: "/admin", label: "Dashboard", icon: "•" },
-  { href: "/admin/news", label: "İçerik", icon: "•" },
-  { href: "/admin/news/new", label: "Yeni Haber", icon: "+" },
-  { href: "/admin/homepage", label: "Yerleşim", icon: "•" }
+  { href: "/admin", label: "Dashboard", icon: "01" },
+  { href: "/admin/news", label: "Icerik", icon: "02" },
+  { href: "/admin/news/new", label: "Yeni Haber", icon: "03" },
+  { href: "/admin/homepage", label: "Yerlesim", icon: "04" }
 ];
 
 export default function AdminLayout({ children, title }) {
@@ -24,7 +24,7 @@ export default function AdminLayout({ children, title }) {
           <Link href="/" className="admin-brand">
             {SITE_NAME}
           </Link>
-          <span className="admin-brand-subline">Yayın masası, manşet akışı ve reklam yönetimi</span>
+          <span className="admin-brand-subline">Yayin masasi, manset akisi ve reklam yonetimi tek panelde.</span>
         </div>
 
         <nav className="admin-nav">
@@ -43,12 +43,12 @@ export default function AdminLayout({ children, title }) {
         </nav>
 
         <div className="admin-sidebar-note">
-          <strong>Canlı Yayın Kontrolü</strong>
-          <span>Haber üretimi, sıralama, manşet akışı ve reklam alanları aynı panelden yönetilir.</span>
+          <strong>Canli Yayin Kontrolu</strong>
+          <span>Haber uretimi, siralama, manset akisi ve reklam alanlari ayni panelden yonetilir.</span>
         </div>
 
         <button type="button" className="button button-outline" onClick={handleLogout}>
-          Çıkış Yap
+          Cikis Yap
         </button>
       </aside>
 

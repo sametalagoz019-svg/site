@@ -49,6 +49,26 @@ function CloneTopBar() {
   );
 }
 
+function CloneLeadBar({ items }) {
+  const leadItems = items.slice(0, 3);
+
+  if (!leadItems.length) return null;
+
+  return (
+    <div className="clone-leadbar">
+      <span className="clone-leadbar-label">Editor Masasi</span>
+      <div className="clone-leadbar-links">
+        {leadItems.map((item) => (
+          <a key={item._id} href={`/news/${item.slug}`}>
+            <strong>{item.category}</strong>
+            <span>{item.title}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function ClonePromo({ ad }) {
   return (
     <div className="clone-promo">
@@ -67,6 +87,7 @@ function ClonePromo({ ad }) {
         </div>
       </div>
       <a href={ad.url || "#"} className="clone-promo-banner" target="_blank" rel="noopener noreferrer">
+        <small>Kurumsal Duyuru</small>
         <strong>{ad.title}</strong>
         <span>{ad.text}</span>
       </a>
@@ -165,6 +186,7 @@ function CloneSponsor({ sponsor }) {
       ) : (
         <img src="/logo.svg" alt={SITE_NAME} className="clone-sponsor-logo" />
       )}
+      <small>Destekleyen Alan</small>
       <strong>{sponsor.title || SITE_NAME}</strong>
       <span>{sponsor.text || SITE_SLOGAN}</span>
     </a>
@@ -321,6 +343,7 @@ export default function HomePage({ heroItems, featuredList, superHeadlines, surm
   const cardPool = [...featuredList].filter(Boolean);
   const secondPool = [...surmanset].filter(Boolean);
   const compactPool = [...newsRiver, ...superHeadlines, ...featuredList].filter(Boolean);
+  const leadPool = [...heroItems, ...newsRiver].filter(Boolean);
 
   return (
     <>
@@ -335,6 +358,7 @@ export default function HomePage({ heroItems, featuredList, superHeadlines, surm
       <main className="clone-page">
         <CloneTopBar />
         <div className="clone-center">
+          <CloneLeadBar items={leadPool} />
           <CloneHero items={heroPool} />
           <ClonePromo ad={ads.top} />
           <CloneSponsor sponsor={sponsor} />
