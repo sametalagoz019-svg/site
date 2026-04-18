@@ -1,0 +1,16 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#EFE6D8"/>
+  <rect width="1200" height="720" fill="url(#paint0_linear)"/>
+  <path d="M140 250L600 92L1060 250L600 408L140 250Z" fill="#7E1B23"/>
+  <path d="M250 306V448C250 499 412 558 600 558C788 558 950 499 950 448V306" fill="#A0332B"/>
+  <path d="M1040 252V434" stroke="#F1C24B" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="1040" cy="474" r="34" fill="#F1C24B"/>
+  <text x="120" y="638" fill="#FFF8EE" font-family="Trebuchet MS, Arial, sans-serif" font-size="62" font-weight="700">Eğitim Gündemi</text>
+  <text x="120" y="686" fill="#F3D18C" font-family="Arial, sans-serif" font-size="28">Kampüs, yurt ve öğrenci yaşamı</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="600" y1="0" x2="600" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C0613A"/>
+      <stop offset="1" stop-color="#61212A"/>
+    </linearGradient>
+  </defs>
+</svg>

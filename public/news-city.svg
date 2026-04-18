@@ -1,0 +1,21 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#EDE5D8"/>
+  <rect width="1200" height="720" fill="url(#paint0_linear)"/>
+  <circle cx="946" cy="147" r="82" fill="#F2C14E" fill-opacity="0.85"/>
+  <path d="M0 557C141 495 226 479 362 494C498 509 591 599 739 596C890 592 999 506 1200 464V720H0V557Z" fill="#B34536"/>
+  <path d="M0 601C166 559 242 584 384 606C530 628 634 568 786 539C922 513 1055 534 1200 580V720H0V601Z" fill="#7E1B23"/>
+  <rect x="110" y="272" width="126" height="231" rx="8" fill="#E0C99F"/>
+  <rect x="254" y="210" width="164" height="293" rx="8" fill="#D9B584"/>
+  <rect x="448" y="244" width="137" height="259" rx="8" fill="#EAD7B6"/>
+  <rect x="620" y="182" width="167" height="321" rx="8" fill="#D0A46A"/>
+  <rect x="817" y="252" width="126" height="251" rx="8" fill="#E7D3B0"/>
+  <rect x="968" y="222" width="112" height="281" rx="8" fill="#C98C57"/>
+  <text x="96" y="108" fill="#FFF8EE" font-family="Trebuchet MS, Arial, sans-serif" font-size="62" font-weight="700">Kent Gündemi</text>
+  <text x="96" y="162" fill="#FFF0C8" font-family="Arial, sans-serif" font-size="28">Sivas merkezden güncel gelişmeler</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="600" y1="0" x2="600" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B94838"/>
+      <stop offset="1" stop-color="#6E151D"/>
+    </linearGradient>
+  </defs>
+</svg>
