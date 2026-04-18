@@ -5271,7 +5271,7 @@ select:focus {
   grid-area: numbers;
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  width: min(100%, 860px);
+  width: min(100%, 1040px);
   border: 1px solid #dde3ea;
   border-top: none;
   background: #fff;
@@ -5333,7 +5333,7 @@ select:focus {
   position: relative;
   display: block;
   overflow: hidden;
-  width: min(100%, 860px);
+  width: min(100%, 1040px);
   border: 1px solid #dde3ea;
   background: #111;
   aspect-ratio: 16 / 9;
@@ -5508,7 +5508,7 @@ select:focus {
   display: flex;
   gap: 14px;
   align-items: center;
-  width: min(100%, 860px);
+  width: min(100%, 1040px);
   padding: 6px 10px;
   background: #fff;
   border: 1px solid #e4e9ef;
@@ -5529,7 +5529,7 @@ select:focus {
 .clone-second-numbers {
   display: grid;
   grid-template-columns: repeat(8, minmax(0, 1fr));
-  width: min(100%, 860px);
+  width: min(100%, 1040px);
   border: 1px solid #e4e9ef;
   border-top: none;
   background: #fff;
