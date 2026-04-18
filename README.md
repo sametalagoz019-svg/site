@@ -1,9 +1,11 @@
 # Sivas Gündem 58
 
-Next.js tabanlı yerel haber sitesi. Proje iki modda çalışabilir:
+Next.js tabanlı yerel haber sitesi. Proje hem yerel JSON veri kaynağıyla hem de MongoDB ile çalışabilir.
 
-- `LOCAL_DB=1`: MongoDB olmadan, proje içindeki JSON veri dosyasıyla
-- `LOCAL_DB=0`: MongoDB bağlantısıyla
+## Çalışma Modları
+
+- `LOCAL_DB=1`: MongoDB olmadan, `data/localdb.json` üzerinden çalışır.
+- `LOCAL_DB=0`: MongoDB bağlantısı ile çalışır.
 
 ## Özellikler
 
@@ -12,18 +14,28 @@ Next.js tabanlı yerel haber sitesi. Proje iki modda çalışabilir:
 - Haber oluşturma, düzenleme ve silme
 - Taslak, onay bekleyen ve yayınlanan haber akışı
 - Görsel yükleme
-- Makale görüntülenme ve ziyaretçi istatistikleri
-- İnternetten Sivas odaklı haber çekme ve onaya bırakma
-- `CRON_SECRET` ile tetiklenebilen cron endpoint
+- Ziyaretçi ve makale görüntüleme istatistikleri
+- İnternetten haber çekme ve editoryal onaya alma
+- Ana sayfa manşet, sürmanşet ve vitrin yönetimi
+- Dua vakti bandı ve temel SEO uçları
 
-## Hızlı Başlangıç
+## Kurulum
 
-1. `.env.example` dosyasını `.env.local` olarak kopyala.
-2. Yerel mod için `.env.local` içinde `LOCAL_DB=1` bırak.
-3. `npm install`
-4. `npm run dev`
+1. `.env.example` dosyasını `.env.local` olarak kopyalayın.
+2. Yerel kullanım için `.env.local` içinde `LOCAL_DB=1` bırakın.
+3. Bağımlılıkları kurun:
 
-Not: Bu ortamda `next dev` alt süreç izni yüzünden çalışmayabiliyor. Bu durumda:
+```bash
+npm install
+```
+
+4. Geliştirme ortamını başlatın:
+
+```bash
+npm run dev
+```
+
+Bu ortamda `next dev` bazı izin kısıtları yüzünden açılamazsa şu akışı kullanın:
 
 ```bash
 npm run build
@@ -32,22 +44,48 @@ npm run start
 
 ## Varsayılan Admin Hesabı
 
-İlk girişte `.env.local` içindeki `ADMIN_EMAIL` ve `ADMIN_PASSWORD` kullanılır. Kullanıcı yoksa sistem otomatik oluşturur.
+İlk girişte `.env.local` içindeki şu alanlar kullanılır:
+
+- `ADMIN_EMAIL`
+- `ADMIN_PASSWORD`
+
+Kullanıcı yoksa sistem ilk oturumda bu hesabı oluşturur.
 
 ## Yerel Veri Modu
 
-- Veriler `data/localdb.json` dosyasında tutulur.
-- Haber oluşturma, düzenleme, silme ve admin girişi bu modda çalışır.
-- MongoDB kurulmadan demo ve içerik hazırlığı için yeterlidir.
+- Veriler `data/localdb.json` içinde tutulur.
+- Admin girişi, haber yönetimi ve temel içerik akışı bu modda çalışır.
+- Demo, içerik hazırlığı ve arayüz geliştirme için yeterlidir.
 
-## MongoDB Moduna Geçiş
+## MongoDB Modu
 
-1. Makinede MongoDB kur.
-2. `.env.local` içindeki `MONGODB_URI` değerini gerçek bağlantıya ayarla.
-3. `LOCAL_DB=0` yap.
-4. Uygulamayı yeniden başlat.
+1. Makinede MongoDB kurun.
+2. `.env.local` içindeki `MONGODB_URI` değerini gerçek bağlantı adresiyle değiştirin.
+3. `LOCAL_DB=0` yapın.
+4. Uygulamayı yeniden başlatın.
 
-## Otomatik Haber Çekme
+## Önemli Ortam Değişkenleri
 
-- Yönetim panelinden `İnternetten Sivas Haberlerini Çek` butonu ile
-- Ya da `POST /api/admin/cron-fetch` ve `Authorization: Bearer <CRON_SECRET>` ile
+- `MONGODB_URI`
+- `JWT_SECRET`
+- `ADMIN_EMAIL`
+- `ADMIN_PASSWORD`
+- `NEXT_PUBLIC_SITE_URL`
+- `CRON_SECRET`
+- `LOCAL_DB`
+
+## Haber Çekme
+
+- Yönetim panelindeki haber çekme akışı ile
+- veya `POST /api/admin/cron-fetch`
+
+Header:
+
+```text
+Authorization: Bearer <CRON_SECRET>
+```
+
+## Repo Notları
+
+- `node_modules`, `.next`, `.run` ve `.env.local` repoya dahil edilmez.
+- Yüklenen medya dosyaları `public/uploads/` altında tutulur.
